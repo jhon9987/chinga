@@ -485,6 +485,13 @@ color4: "#FF1F6F",
         document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>
     <script src="/script.js"></script>
+	<script type='text/javascript'>
+$(function(){
+    $(document).bind("contextmenu",function(e){
+        return false;
+    });
+});
+</script>
 </body>
 <script type='text/javascript'>
 	document.oncontextmenu = function(){return false}
