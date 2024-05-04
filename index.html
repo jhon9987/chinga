@@ -49,14 +49,13 @@
 
 
 
-
 #fondo {
  width: 100%;
 			height: 100vh;
 			background-image: linear-gradient(-60deg, #5415c3 50%, #09f 50%);
-			background-size: 200% 200%;
+			background-size: 400% 400%;
 			position: relative;
-			animation:cambiar 5s ease-in-out infinite alternate;
+			animation:cambiar 8s ease-in-out infinite alternate;
 }
 
 @keyframes cambiar{
@@ -109,43 +108,22 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  border-radius: 50px;
+  border-radius: 68px;
   display: flex;
-  width: 185px;
- 
- 
-  
-  height: 45px;
+  width: 300px;
+  height: 100px;
   font-size: 25px;
   font-family: "Poppins", sans-serif;
   color: #FFFFFF!important;
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(40px);
   border: 2px solid #FFFFFF!important;
-  flex-direction: column;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
 }
 
-#webtv{
-  position: absolute;
-  top: 70px;
-  right: 20px;
-  border-radius: 50px;
-  display: flex;
-  width: 185px;
-  height: 45px;
-  font-size: 25px;
-  font-family: "Poppins", sans-serif;
-  color: #FFFFFF!important;
-  background-color: #23005C!important;
-  border: 2px solid #FFFFFF!important;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-}
 
 .nav-menu a {
   display: flex;
@@ -254,7 +232,6 @@
 }
 }
 
-
 #3901A4!important;
 
 #23005C!important;
@@ -267,6 +244,7 @@
 </style>
 
 <link rel="stylesheet" media="screen" href="assets/css/styles.css">
+<script data-ad-client="ca-pub-2805434057852709" async src="f.txt"></script>
 
 
 <link href="modern-ticker/css/modern-ticker.css" type="text/css" rel="stylesheet">
@@ -277,33 +255,35 @@
 
 
 
-      <script type="text/javascript">
-         jQuery(document).ready(function () {
-         
-           jQuery(".modern-ticker").modernTicker({
-             effect: "scroll",
-             scrollType: "continuous",
-             scrollStart: "inside",
-             scrollInterval: 20,
-             transitionTime: 500,
-             randomOrder: true,
-             linksEnabled: true,
-             pauseOnHover: true,
-             autoplay: true,
-             feedType: "rss",
-             loadType: "direct",
-             feedUrl: "https://www.clarin.com/rss/lo-ultimo",
-             loadType: "process",
-             loadProcess: "rss2json",
-             forceNoCache: false,
-             feedCount: 15,
-             linkTarget: "_blank",
-             refresh: "5:00"
-           });
-         });
-      </script>
+<script type="text/javascript">
+        jQuery(document).ready(function() {
+
+            jQuery(".modern-ticker").modernTicker({
+                effect: "scroll",
+                scrollType: "continuous",
+                scrollStart: "inside",
+                scrollInterval: 30,
+                transitionTime: 1500,
+                randomOrder: true,
+                linksEnabled: true,
+                pauseOnHover: true,
+                autoplay: true,
+                feedType: "rss",
+                feedUrl: "load-files/feed.rss",
+                loadType: "direct",
+                feedUrl: "https://www.google.com.br/alerts/feeds/02955615230004971654/8405518594258309533",
+                loadType: "process",
+                loadProcess: "rss2json",
+                forceNoCache: false,
+                feedCount: 20,
+                linkTarget: "_blank",
+                refresh: "5:00"
+            });
+        });
+    </script>
 </head>
 <body>
+
 <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
 
 <header id="header" class="d-flex flex-column justify-content-center">
@@ -319,10 +299,8 @@
 <li><a target="_black" href="https://www.mediafire.com/file/xwwd9t0cixddjqm/app1208744.apk/file"><i class="bx bxl-play-store"></i>
 <span>APK Android</span></a></li>
 <li><a target="_black" href="https://wa.me/5492804688484"><i class="bx bxl-whatsapp"></i>  WhatsApp</a></li>
-<li><a target="_black" href=""><i class="bx bxs-envelope"></i><span>Pedidos</span></a></li>
-<li><a href="" class="card-link" data-toggle="modal" data-target="#modalPlaylist"><i class="bx bxs-playlist"></i><span>Ultimas Canciones</span></a></li>
-<li><a href="" class="card-link" data-toggle="modal" data-target="#siteModal"><i class="bx bx-book-bookmark"></i><span>Politica de Privacidad</span></a></li>
-
+<li><img class="img-fluid d-block" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXQHuVrsBp_DJ1EIA3Z5zOtatxQt7oZ3ZVve6GQ-WVCCKAHfAdkxfjFukjsjWQWc9Ak2OXeTdGKd58FRRjbyCh_-_mvIHb55YI8aMJZxDXlm9BmqhOYSmQMwciLHY9O0gUhB8RTsbA5i4tST3m088OGfMPW7TmBthbHpEBt-rLQponYfG7o4gk4G9vDRd_/s1200/logo.png" sizes="192x192"></i>
+<span></span></a></li>
 
 </ul>
 </nav>
@@ -336,7 +314,9 @@
 
 <div id="relogio">
 <div class="bx bx-stopwatch bx-tada"></div>
-<div id="hora"> Hora Cierta</div>
+<div class="container-clock">
+<p id="time">00:00:00</p>
+<p id="date">date</p>
 </div>
 
 
@@ -413,7 +393,7 @@
 <script src="assets/js/lunaradio.js"></script>
 <script>
 $("#player").lunaradio({
-token: "ZFNWW2FiXlNrV2QgXmdgUx9nYFtoV2RlVyBVYV8=",
+token: "",
 userinterface: "big", //big o small
 backgroundcolor: "#5415c3",
 fontcolor: "#FFFFFF",
